@@ -1,1 +1,54 @@
 In Javascript almost everything is an Object 
+
+What is an Object
+    A set of properties wrapped together, this is similar to how we use in other programming languages like Java and Python
+
+How do we create Object
+    We can create an object using object literal or using Object constructor
+    var obj = {}  //using literal
+    var obj = new Object() // using constructor
+
+    ** Hint ** 
+    For any constructor if we are not passing any arguments we can actually remove paranthesis
+    in the above case we can call like this var obj = new Object
+
+How do we add properties to an Object
+    we can add while creating or we can add after creating, or to make it clear we can ask constructor to add properties after creating or we can add it ourselves
+
+    var obj = {
+        "name":"Sample Object",
+        "getName":function (){
+            return this.name;
+        }
+    };
+    or 
+    var obj = {};
+    obj["name"]= "Sample Object";
+
+    or we can pass the whole object literal to Object constructor like below
+
+    var obj = new Object({
+        "name":"Sample Object",
+        "getName":function (){
+            return this.name;
+        }
+    })
+
+    or 
+    var obj = new Object()
+    obj["name"] = "Sample Object";
+
+What happens if we pass other than object to an Object constructor ?
+    Object()   // {}
+    Object(null) // {}
+    Object(undefined) // {}
+    
+    In the above cases it will be just an empty object
+    
+    Object(1) // Number { 1 }
+    Object("1") // String { "1" }
+    Object(true) // Boolean { true }
+
+
+How do we create 
+How to we inherit properties from one object to object ?
